@@ -25,11 +25,12 @@ barplot(df_to_graph$performance, names.arg = df_to_graph$preferred_foot, col = c
 
 # task 4
 df %>% select(nationality_name, preferred_foot) %>%
-  filter(nationality_name %in% c("Slovakia", "Czech Republic")) %>%
+  filter(nationality_name %in% c('Slovakia', 'Czech Republic')) %>%
   group_by(nationality_name, preferred_foot) %>%
   summarize(count = n()) %>%
   pivot_wider(names_from = preferred_foot, values_from = count) %>%
   mutate(Total = Left + Right, Proportion = Left / (Left + Right))
+
 
 # task 5 - Use table that shows the number of Slovak and Czech
 # left/right-footed players. Append column summaries
