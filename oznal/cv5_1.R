@@ -20,7 +20,7 @@ ames_test <- testing(ames_split)
 
 # tasks
 # task 1
-df <- read_csv('data/Practicum.5.1.csv')
+df <- read_csv('../data/Practicum.5.1.csv')
 hist(df$Sale_Price, breaks = 100)
 
 # task 2
@@ -32,3 +32,11 @@ View(df)
 
 # task 3
 pairs(df_grouped)
+
+# task 4
+
+library(rsample)
+folds <- vfold_cv(df_grouped, v = 5)
+print(folds)
+training_data <- training(folds)
+testing_data <- testing(folds)
