@@ -66,7 +66,7 @@ library(ggpubr)
 #' informaciu o vzdelani respondenta (triedny faktor-vzdelanie, tri urovne).
 #' Na hladine vyznamnosti $\alpha = 0.05$ testujte hypotezu, ze faktor
 #' vzdelanie je nulovy a teda nema vplyv na vysku prijmu
-data <- read_xlsx('data\\dataE.xlsx')
+data <- read_xlsx('..\\data\\dataE.xlsx')
 data
 #' najprv graficka analyza
 boxplot(data$mprij~data$vzdelanie, col = brewer.pal(3, 'Pastel1'),
@@ -115,7 +115,7 @@ plot(ScheffeTest(an1))
 #'Priklad
 #'Traja laboranti urobili dve opakovane merania latky deg na 4 chromatografoch.
 #'Ma na vysledok vplyv laborant, pristroj?
-anova1 <- read_xlsx('data//anova1.xlsx')
+anova1 <- read_xlsx('..//data//anova1.xlsx')
 anova1
 #' grafy rozdelit vzhladom na dva faktory
 par(mfrow = c(1, 2))
