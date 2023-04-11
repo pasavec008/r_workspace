@@ -58,7 +58,7 @@ install.packages('caret')
 
 library(caret)
 data$predicted_default <- ifelse(model$fitted.values > 0.01, 1, 0)
-confusionMatrix(as_factor(data$predicted_default), as_factor(data$default), positive = "1")
+confusionMatrix(as_factor(data$predicted_default), as_factor(data$default), positive = '1')
 
 ggplot(data, mapping = aes(balance, fill = as_factor(predicted_default))) +
   geom_histogram(alpha=0.6)
