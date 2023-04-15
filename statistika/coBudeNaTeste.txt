@@ -1,0 +1,6 @@
+IS (cv. 4)
+Testy parametricke (cv. 5, 6)
+ANOVA (cv. 6)
+Testy dobrej zhody (cv. 7)
+Neparametricke testy (cv. 8)
+Kruskal W. (cv. 8)

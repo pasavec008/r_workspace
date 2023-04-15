@@ -1,6 +1,6 @@
 # Uvod do R, uzitocne prikazy
 getwd()
-setwd('C:/R/workspace')
+setwd('D:\\skola2022_2023\\1letny\\r_workspace')
 dir()
 list.files()
 
