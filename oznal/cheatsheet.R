@@ -16,13 +16,13 @@ library(MASS)
 library(ROCit)
 
 ### Load data
-data <- read.csv('/Users/oliverkubicka/Desktop/FIIT/OZNAL/data/Default.csv')
+data <- read.csv('data/Default.csv')
 View(data)
 ### Data cleaning
 cleaned_data <- data %>%
   pivot_wider(names_from = Area_SF, values_from = Value_SF) #opposite for pivot_longer
 # Subset
-data[data$student = 1,]$student
+data[data$student == 1,]$student
 # Add ID to data using length and move ID column as first
 data$ID <- 1:length(data$default)
 data %>% select(ID, everything())
